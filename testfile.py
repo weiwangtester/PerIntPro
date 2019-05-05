@@ -3,3 +3,4 @@
 
 import djongo
 
+print('test')
