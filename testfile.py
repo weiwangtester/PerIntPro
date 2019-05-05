@@ -3,4 +3,4 @@
 
 import djongo
 
-print('test.')
+print('test')
