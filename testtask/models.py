@@ -5,14 +5,14 @@ from django.db import models
 
 class Tasksummary(models.Model):
 	taskid = models.AutoField(primary_key=True)
-	userid = models.IntegerField()
+	useremail = models.CharField(max_length=30)
 	taskname = models.CharField(max_length=60)
 	taskcreatedate = models.DateTimeField(auto_now_add=True)
 	taskeditdate = models.DateTimeField(auto_now=True)
 	taskdetails = models.TextField()
 
 
-class Testresult(models.Model):
+class Taskresult(models.Model):
 	resultid = models.AutoField(primary_key=True)
 	taskid = models.ForeignKey(Tasksummary, on_delete=models.CASCADE)
 	teststarttime = models.DateTimeField()

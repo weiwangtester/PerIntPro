@@ -6,4 +6,4 @@ from .models import *
 
 admin.site.register(Tasksummary)
 
-admin.site.register(Testresult)
+admin.site.register(Taskresult)
