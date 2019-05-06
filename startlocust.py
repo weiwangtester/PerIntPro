@@ -1,0 +1,3 @@
+import testlocust
+
+testlocust.run()
