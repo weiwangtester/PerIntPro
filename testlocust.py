@@ -1,10 +1,11 @@
 import os
 from locust import HttpLocust, TaskSet, task
 
+
 onejson = {
 	"Method": "Get",
-	"Host": "https://192.168.2.64",
-	"Url": "/#/login",
+	"Host": "http://10.10.4.5",
+	"Url": "/src/warn/#/login",
 	"Data": {},
 	"Usernum": 100,
 	"Usersec": 20,
@@ -40,6 +41,7 @@ class oneTaskSet(TaskSet):
 			self.client.get(
 				url=onejson['Url'],
 				params=onejson['Data'],
+				# verify=False,
 			)
 
 
